@@ -13,6 +13,24 @@
 	<title>Royer &#8211; Maestro de Inglés</title>
 	<link rel="stylesheet" type="text/css" href="css/css.css"/>
     <link rel="stylesheet" type="text/css" href="css/fontello.css"/>
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="jquery.hvideo.js" type="text/javascript" charset="utf-8"></script>
+		<script src="hvideo-debug.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" href="hvideo.css" type="text/css" media="screen" title="HTML5 video base style" charset="utf-8">
+		<script type="text/javascript" charset="utf-8">
+			$(function(){
+				$('#test1').hvideo({
+					//autoresize: true
+				});
+				// Using hvideo-debug.js we can enable logging alot of stuff to console:
+				//hvideo.debug('#test1');
+			});
+		</script>
+		<style type="text/css" media="screen">
+			body { background:#eee; }
+			#test1 { margin-top:20px; margin-left:20px; }
+		</style>
+	</head>
          
 </head>
 <body>
@@ -57,6 +75,24 @@
      <div class="video">
          <br><iframe width="560" height="315" src="http://www.youtube.com/embed/pwIxYjdKMx4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
          <p>Este video es una pequeña muestra de mis cursos a principiantes, inscribete ya!!</p>
+	    <controls>
+				<button class="play-pause paused" title="Toggle playback"></button>
+				<extended>
+					<bar class="position" title="Current position">
+						<p class="meta">0:00</p>
+					</bar>
+					<bar class="total">
+						<p class="meta" title="Total length">0:00</p>
+					</bar>
+					<bar class="buffered"></bar>
+					<bar class="unbuffered"></bar>
+					<button class="mute-audio" title="Mute/unmute audio"></button>
+					<button class="zoom" title="Zoom in/out"></button>
+				</extended>
+			</controls>
+			<video width="640" height="360"
+			       poster="http://hunch.se/tmp/Spotify_-_the_story.jpg"
+			       autobuffer> 
      </div>
 
      <div class="active">
